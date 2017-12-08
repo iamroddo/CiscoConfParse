@@ -1,0 +1,4 @@
+hostname device3
+access-list 20 permit 172.20.0.0 0.0.255.255
+line vty 0 4
+ access-class 20 in
