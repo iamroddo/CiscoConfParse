@@ -19,7 +19,7 @@ for file in os.listdir(path):
             if "access-class" in child.text:
                 acl = re.search('access\-class\s(.+?)\sin', child.text).group(1)
                 vty_acl[vty_number] = acl
-        vtys_list.append(vty_acl)
+    vtys_list.append(vty_acl)
     devices[hostname] = vtys_list
 
 print (json.dumps(devices, indent=1))
